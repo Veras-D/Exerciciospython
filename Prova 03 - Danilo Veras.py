@@ -3,15 +3,15 @@ p = -1
 u = -1
 D = 43
 while v < 0:
-    v = float(input('Insira a velocidade média do fluido: '))
+    v = float(input('Insira a velocidade média do fluido [m/s]: '))
     if v < 0:
         print('Digite um valor positivo')
 while p <= 0:
-    p = float(input('Insira a massa específica do fluido: '))
+    p = float(input('Insira a massa específica do fluido [Kg/m^3]: '))
     if p < 0:
         print('Digite um valor positivo')
 while u < 0:
-    u = float(input('Insira a viscosidade dinâmica do fluido: '))
+    u = float(input('Insira a viscosidade dinâmica do fluido Pa.s: '))
     if v < 0:
         print('Digite um valor positivo')
 Re = (p * v * D) / u
