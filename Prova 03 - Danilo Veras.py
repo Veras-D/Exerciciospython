@@ -1,3 +1,6 @@
+v = -1
+p = -1
+u = -1
 D = 43
 while v < 0:
     v = float(input('Insira a velocidade média do fluido: '))
@@ -14,7 +17,7 @@ while u < 0:
 Re = (p * v * D) / u
 if Re <= 2000:
     print(f'O coeficiente de Reynolds calculado foi {Re:.2f}, portanto o escoamento é laminar')
-elif Re > 2000 and Re < 2400:
+elif 2000 < Re < 2400:
     print(f'O coeficiente de Reynolds calculado foi {Re:.2f}, portanto o escoamento é de transição')
 elif Re >= 2400:
     print(f'O coeficiente de Reynolds calculado foi {Re:.2f}, portanto o escoamento é turbulento')
