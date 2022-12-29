@@ -1,0 +1,6 @@
+Num = int(input('Digite um numero: '))
+M = int(Num / 1000)
+C = int(Num / 100 - M * 10)
+D = int(Num / 10 - 100 * M - 10 * C)
+U = int(Num - M * 1000 - C * 100 - D * 10)
+print(f'Seu numero tem {M} milhares, {C} centenas, {D} dezenas e {U} unidades.')

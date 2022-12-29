@@ -1,0 +1,15 @@
+a = input('Digite algo: ')
+
+print(f'É um numero? {a.isnumeric()}')
+print(f'É um numero ou letra? {a.isalnum()}')
+print(f'É uma letra? {a.isalpha()}')
+print(f'É ASCII? {a.isascii()}')
+print(f'É um digito? {a.isdigit()}')
+print(f'É decimal? {a.isdecimal()}')
+print(f'É identificado pelo python? {a.isidentifier()}')
+print(f'Esta minusculo? {a.islower()}')
+print(f'É imprimível? {a.isprintable()}')
+print(f'Só tem espaços? {a.isspace()}')
+print(f'Esta capitalizado? {a.istitle()}')
+print(f'Esta maiusculo? {a.isupper()}')
+# Não precisa mais usar .format é só colocar f antes das ''
