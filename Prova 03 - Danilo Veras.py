@@ -13,10 +13,10 @@ while u < 0:
         print('Digite um valor positivo')
 Re = (p * v * D) / u
 if Re <= 2000:
-    print(f'O coeficiente de Reynolds calculado foi {Re}, portanto o escoamento é laminar')
+    print(f'O coeficiente de Reynolds calculado foi {Re:.2f}, portanto o escoamento é laminar')
 elif Re > 2000 and Re < 2400:
-    print(f'O coeficiente de Reynolds calculado foi {Re}, portanto o escoamento é de transição')
+    print(f'O coeficiente de Reynolds calculado foi {Re:.2f}, portanto o escoamento é de transição')
 elif Re >= 2400:
-    print(f'O coeficiente de Reynolds calculado foi {Re}, portanto o escoamento é turbulento')
+    print(f'O coeficiente de Reynolds calculado foi {Re:.2f}, portanto o escoamento é turbulento')
 else:
     print("Valor não definido")
