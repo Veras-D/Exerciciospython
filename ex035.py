@@ -9,4 +9,4 @@ elif l1 + l3 <= l2:
     print('Esses seguimentos não formam um triangulo.')
 else:
     print('Esses seguimentos formam um triangulo.')
-# podia ter deixado todas as condições em um unico if
+# podia ter deixado todas as condições em um unico if com o and
