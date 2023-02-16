@@ -40,8 +40,8 @@ if num_elo == 1:
     print(F12_ang)
 #    print(f'O modulo de F12 é {F12_mod:.4f}, na direção {F12_ang:.4f} e o valor de T12 é {T12:.4f}.')
 elif num_elo == 3:
-# 3 elos
-# Variáveis iniciais
+    # 3 elos
+    # Variáveis iniciais
     L2 = float(input('Qual o comprimento da barra 2  (em metros)? '))
     massa_2 = float(input('Qual o massa da barra 2? '))
     theta_2 = radians(float(input('Qual o angulo da barra 2? ')))
@@ -107,7 +107,7 @@ elif num_elo == 3:
     F13x
     T12''')
     print(B)
-#elif num_elo == 4:
+# elif num_elo == 4:
 # 4 elos
 # Variáveis iniciais
 
