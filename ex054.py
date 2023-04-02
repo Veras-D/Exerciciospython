@@ -4,10 +4,7 @@ Author: Veras-D
 Date: 02/04/23
 """
 from datetime import date
-de_menor = 0
-de_maior = 0
-pessoas = 0
-n_identificados = 0
+de_menor, de_maior, pessoas, n_identificados = 0, 0, 0, 0
 while pessoas <= 0:
     pessoas = int(input('Quantas pessoas deseja classificar? '))
 for cont in range(1, pessoas + 1):
