@@ -2,16 +2,21 @@ import sympy
 from math import *
 x = sympy.symbols('x')
 a = sympy.symbols('a')
-fun = f'sin({a})'
+fun = f'(sin({a}) + 1)**0.5'
 derv = 0
 n = int(input('Insira o n: '))
 maclaurin = []
 for n in range(0, n + 1):
-    derv = sympy.diff(fun)
-    print(derv)
-    maclaurin.append(derv * x**n / factorial(n))
-    n += 1
-    fun = derv
+    if n == 0:
+        print(fun)
+        maclaurin.append(sympy.sympify(fun) * x ** n / factorial(n))
+        n += 1
+    else:
+        derv = sympy.diff(fun)
+        print(derv)
+        maclaurin.append(derv * x**n / factorial(n))
+        n += 1
+        fun = derv
 print(maclaurin)
 maclaurin_soma = sum(maclaurin)
 print(maclaurin_soma.subs({a: 0}))
