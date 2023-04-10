@@ -10,12 +10,10 @@ for n in range(0, n + 1):
     if n == 0:
         print(fun)
         maclaurin.append(sympy.sympify(fun) * x ** n / factorial(n))
-        n += 1
     else:
         derv = sympy.diff(fun)
         print(derv)
         maclaurin.append(derv * x**n / factorial(n))
-        n += 1
         fun = derv
 print(maclaurin)
 maclaurin_soma = sum(maclaurin)
