@@ -1,11 +1,15 @@
 from math import *
 import sympy
+# tentar usar a função N do sympy para deixar o resultado com mais casa decimais
 import numpy as np
-x = np.linspace(-100, 0, 21)
-print(x)
+# para que usar o numpy???, Plotar o grafico???
+x = sympy.symbols('x')
 a = 0
 b = 10
-f = sympy.sympify(input('Qual a função? '))
+num = 7  # número de casas decimais confiáveis
+erro = 10 ** -num
+n = 100  # número máximo de iterações
+fun = f'{e} ** {x}'
 # while f(y) <= 0.0001 or f(a) <= 0.0001 or f(b) <= 0.0001:
     # y = abs(a + b) / 2
     # f(a) * f(b) < 0 tem pelo menos uma raiz

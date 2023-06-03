@@ -107,7 +107,7 @@ elif num_elo == 3:
     F13x
     T12''')
     print(B)
-# elif num_elo == 4:
+# elif num_elo == 4:  #TO:DO: TERMINAR O CÓDIGO
 # 4 elos
 # Variáveis iniciais
 
