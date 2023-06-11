@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-from math import *
 P1 = 100  # kpa
 T1 = 27 + 273.15  # k
 # T5 ou q_sai = ???
