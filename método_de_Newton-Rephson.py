@@ -9,7 +9,7 @@ x0 = Decimal(input('Qual o chute inicial? '))
 num = 7  # número de casas decimais confiáveis
 erro = 10 ** -num
 n = 1000  # número máximo de iterações
-fun = f'36 * {x} ** 5 + 432 * {x} ** 4 - 13 * {x} ** 3 + 156 * {x} ** 2 + {x} + 12'
+fun = f'cos({x}) - {x}'
 y0 = Decimal(str(sympy.sympify(fun).subs({x: x0})))
 while abs(y0) > erro and c < n:  # tentar colocar abs(x1 — x0) > erro na condição de repetição, 2 whiles?
     y0 = Decimal(str(sympy.sympify(fun).subs({x: x0})))
