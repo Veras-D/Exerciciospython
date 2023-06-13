@@ -3,6 +3,7 @@ import sympy
 import numpy as np
 import matplotlib.pyplot as plt
 # tentar usar a função N do sympy para deixar o resultado com mais casa decimais
+cod = 0
 c = 0
 x = sympy.symbols('x')
 a = -5
@@ -31,10 +32,13 @@ while abs(a - b) > erro and c < n:
     if f_b * f_x0 < 0:
         a = x0
     else:
-        print('Não há raiz no intervalo')
+        cod = 1
         break
     c += 1
-print(a)
-print(b)
-print(x0)
+if cod == 0:
+    print(a)
+    print(b)
+    print(x0)
+else:
+    print('Não há raiz no intervalo')
 # programa da erro se considerar o modulo
