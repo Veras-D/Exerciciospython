@@ -6,26 +6,27 @@ import matplotlib.pyplot as plt
 # Importação de bibliotecas necessárias
 
 cod = 0
-c = 0
+n = 0
 x = sympy.symbols('x')
 
-a = 1
-b = 1.5
+a = -2
+b = 0
 
 x0 = (a + b) / 2
-num = 3  # número de casas decimais confiáveis
+num = 1  # número de casas decimais confiáveis
 erro = 10 ** -num
-n = 100  # número máximo de iterações
+n_max = 100  # número máximo de iterações
 
-fun = f'{e ** x -  sympy.tan(x)}'
+fun = f'{e ** x -x -2}'
 
 f_x0 = sympy.sympify(fun).subs({x: x0})
+k = eval(str((sympy.log(b - a) - sympy.log(erro)) / sympy.log(2)))
 
-if f_x0 <= erro:
+if f_x0 >= erro:
     print(f'Valor de x0: {x0}')
 else:
     # Loop principal para encontrar a raiz
-    while abs(a - b) > erro and c < n:
+    while abs(a - b) > erro and n < n_max:
         x0 = (a + b) / 2
 
         # Avaliação da função nos pontos a, b e x0
@@ -44,10 +45,11 @@ else:
             cod = 1
             break
 
-        c += 1
+        n += 1
 
     # Verificação do resultado
     if cod == 0:
+        print(f'k > {k}')
         print(f'Valor de a: {a}')
         print(f'Valor de b: {b}')
         print(f'Valor de x0: {x0}')
