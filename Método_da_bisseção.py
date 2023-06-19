@@ -1,26 +1,29 @@
-from math import *
+from math import e, log, sin
 import sympy
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Importação de bibliotecas necessárias
+import pandas as pd
 
 cod = 0
 n = 0
 x = sympy.symbols('x')
 
-a = -2
-b = 0
+a = 1.5
+b = 2
 
 x0 = (a + b) / 2
-num = 1  # número de casas decimais confiáveis
+num = 2  # número de casas decimais confiáveis
 erro = 10 ** -num
 n_max = 100  # número máximo de iterações
 
-fun = f'{e ** x -x -2}'
+fun = f'({x}/2)**2 - sin({x})'
 
 f_x0 = sympy.sympify(fun).subs({x: x0})
-k = eval(str((sympy.log(b - a) - sympy.log(erro)) / sympy.log(2)))
+k = (log(b - a) - log(erro)) / log(2)
+
+n_values = []
+a_values = []
+b_values = []
+x0_values = []
+interval_values = []
 
 if f_x0 >= erro:
     print(f'Valor de x0: {x0}')
@@ -45,10 +48,28 @@ else:
             cod = 1
             break
 
+        # Adicionar valores às listas
+        a_values.append(a)
+        b_values.append(b)
+        x0_values.append(x0)
+        interval_values.append(b - a)
+
         n += 1
 
     # Verificação do resultado
     if cod == 0:
+        # Criar DataFrame com os valores
+        df = pd.DataFrame({
+            'a': a_values,
+            'b': b_values,
+            'x0': x0_values,
+            'Erro': interval_values
+        })
+
+        df.index = df.index + 1
+
+        # Exibir o DataFrame
+        print(f'{df}\n')
         print(f'k > {k}')
         print(f'Valor de a: {a}')
         print(f'Valor de b: {b}')

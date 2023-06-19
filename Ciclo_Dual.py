@@ -1,3 +1,4 @@
+from math import pi
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -94,3 +95,12 @@ plt.show()
 # m_m = m_ar + m_c
 # m_m = P1 * V_m / (R * T1)
 # ro = m_m / V_m
+# cilindrada total = Vd, Vdu = cilindrada unitária, z = numero de cilindros
+# Vdu = pi * (D/2)^2 * h
+D = 0.1  # Diâmetro do cilindro m
+h = 0.1  # altura do cilindro m
+z = 6  # numero de cilindros
+Vd = pi * (D/2) ** 2 * h * z # cilindrada m^3
+N = 3200  # rpm
+# volume morto = v_total - v_cilindrada_unitária = V2
+# v_total = V1
