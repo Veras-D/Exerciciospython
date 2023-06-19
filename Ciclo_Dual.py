@@ -100,7 +100,7 @@ plt.show()
 D = 0.1  # Diâmetro do cilindro m
 h = 0.1  # altura do cilindro m
 z = 6  # numero de cilindros
-Vd = pi * (D/2) ** 2 * h * z # cilindrada m^3
+Vd = pi * (D/2) ** 2 * h * z  # cilindrada m^3
 N = 3200  # rpm
 # volume morto = v_total - v_cilindrada_unitária = V2
 # v_total = V1
