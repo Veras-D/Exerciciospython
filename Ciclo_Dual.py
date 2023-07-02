@@ -5,9 +5,9 @@ from matplotlib import pyplot as plt
 P1 = 100  # kpa
 T1 = 300  # k
 # T5 ou q_sai = ???
-r = 18  # ou 8???
-rc = 1.2
-rp = 1.5
+r = 18  # razão de compressão
+rc = 1.2  # razão de corte
+rp = 1.5  # razão de pressão
 cv = 0.717  # kJ / kg * k
 cp = 1.0048  # kJ / kg * k
 R = cp - cv  # kJ / kg * k
@@ -89,6 +89,7 @@ v_2 = np.linspace(v5, v1)
 P_2 = np.linspace(P5, P1)
 plt.plot(v_2, P_2)
 plt.show()
+
 # tentar fazer um grafico melhor
 # Ciclo real??? mistura ar mais combustivel
 # L_0 = m_ar / m_c = (1 / 0.23) * ((8 / 3) * x + 8 * y - Oc)
@@ -97,10 +98,12 @@ plt.show()
 # ro = m_m / V_m
 # cilindrada total = Vd, Vdu = cilindrada unitária, z = numero de cilindros
 # Vdu = pi * (D/2)^2 * h
-D = 0.1  # Diâmetro do cilindro m
-h = 0.1  # altura do cilindro m
+diam = 0.1  # Diâmetro do cilindro m
+s = 0.1  # altura do cilindro m
 z = 6  # numero de cilindros
-Vd = pi * (D/2) ** 2 * h * z  # cilindrada m^3
-N = 3200  # rpm
+Vd = pi * diam ** 2 * s * z / 4  # cilindrada cm^3
+N = 3200  # rpm dividir por 60
+m_teorico = Vd / (v1 - v2)  # kg
+print(m_teorico)
 # volume morto = v_total - v_cilindrada_unitária = V2
 # v_total = V1
