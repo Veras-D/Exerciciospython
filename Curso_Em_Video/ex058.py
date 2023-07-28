@@ -6,4 +6,4 @@ user = int(input('Digite seu resposta: '))
 while user != comp:
     cont += 1
     user = int(input('Você errou, tente novamente: '))
-print(f'Parabens você acertou em {cont} tentativas.')
+print(f'Parabéns você acertou em {cont} tentativas.')
