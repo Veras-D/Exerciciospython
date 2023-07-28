@@ -1,7 +1,7 @@
 """
-Programa para calcular o fatorial de um número por meio do loop de repetição while
-Data: 28/07/23
-Autor: Veras-D
+Program to calculate the factorial of a number through the while loop repetition
+Date: 07/28/23
+Author: Veras-D
 """
 import numpy as np
 fac = []
