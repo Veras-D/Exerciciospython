@@ -21,10 +21,14 @@ ax2.grid(True)
 
 # Inicialização dos objetos de tarefa DAQ
 with nidaqmx.Task() as temp_task, nidaqmx.Task() as heat_task:
-    temp_task.ai_channels.add_ai_voltage_chan(f"{device_name}/{temp_channel}")  # Configuração do canal de temperatura
-    heat_task.ai_channels.add_ai_voltage_chan(f"{device_name}/{heat_channel}")  # Configuração do canal de fluxo de calor
-    temp_task.timing.cfg_samp_clk_timing(rate=sample_rate, samps_per_chan=num_samples)  # Configuração da taxa de amostragem
-    heat_task.timing.cfg_samp_clk_timing(rate=sample_rate, samps_per_chan=num_samples)  # Configuração da taxa de amostragem
+    temp_task.ai_channels.add_ai_voltage_chan(f"{device_name}/{temp_channel}")
+    # Configuração do canal de temperatura
+    heat_task.ai_channels.add_ai_voltage_chan(f"{device_name}/{heat_channel}")
+    # Configuração do canal de fluxo de calor
+    temp_task.timing.cfg_samp_clk_timing(rate=sample_rate, samps_per_chan=num_samples)
+    # Configuração da taxa de amostragem
+    heat_task.timing.cfg_samp_clk_timing(rate=sample_rate, samps_per_chan=num_samples)
+    # Configuração da taxa de amostragem
 
     # Aquisição de dados
     temperature_data = temp_task.read(number_of_samples_per_channel=num_samples)
@@ -38,3 +42,4 @@ with nidaqmx.Task() as temp_task, nidaqmx.Task() as heat_task:
 
 # Mantenha a janela dos gráficos aberta até que você a feche manualmente
 plt.show(block=True)
+# Projeto descontinuado
