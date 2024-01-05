@@ -6,7 +6,7 @@ Author: Veras
 list = [0]
 num = -1
 while num != 0:
-    num = float(input("Digite um numero: "))
+    num = float(input("Digite um numero [Digite 0 para parar]: "))
     if num != 0:
         list.append(num)
     else:
