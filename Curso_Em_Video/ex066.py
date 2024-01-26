@@ -1,5 +1,4 @@
-soma = 0
-cont = 0
+soma = cont = 0
 while True:
     num = float(input("Digite um numero [Digite 0 para parar]: "))
     if num != 0:

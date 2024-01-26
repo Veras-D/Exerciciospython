@@ -9,6 +9,6 @@ while flag.upper() != "N":
     num = float(input("Digite um numero: "))
     list.append(num)
     flag = str(input("Deseja continuar [S/N]: "))
-print(f"A media dos {len(list)-1} elementos é: {sum(list)/(len(list)-1)}")
+print(f"A media dos {len(list)} elementos é: {sum(list)/(len(list))}")
 print(f"O maior elemento é: {max(list)}")
 print(f"O menor elemento é: {min(list)}")
