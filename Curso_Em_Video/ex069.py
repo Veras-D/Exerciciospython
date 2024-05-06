@@ -10,17 +10,15 @@ idades = []
 sexos = []
 sex_type = ['M', 'F']
 
+print('CADASTRO\n')
 while cont == 'S':
-    print('CADASTRO\n')
     idade = int(input('Idade: '))
     idades.append(idade)
     sexo = str(input('Sexo[M/F]: ')).upper()
-    print(sexo)
     while sexo not in sex_type:
-        sexo = str(input('Sexo[M/F]: ')).upper()
+        sexo = str(input('Sexo[M/F]: ')).upper().strip()[0]
     sexos.append(sexo)
-    cont = str(input('Continuar[S/N]: ')).upper()
-    print(cont)
+    cont = str(input('Continuar[S/N]: ')).upper().strip()[0]
 
 dados = pd.DataFrame({
                       'Idade': idades,
